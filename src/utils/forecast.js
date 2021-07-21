@@ -1,15 +1,15 @@
 const request = require('request')
 
 const forecast = (latitude, longitude, callback) => {
-    const url = 'https://api.mapbox.com/forecast/pk.eyJ1IjoiZ2FuZHJhZHIiLCJhIjoiY2txd2N5Z2NjMG4zNTJwbzFoYXlrMjMyNyJ9.5gC67tggbtTCT_yDd0HwXQ/' + latitude + ',' + longitude
+    const url = 'http://api.weatherstack.com/current?access_key=e562704299f5e9a6bb484ff07e1d8694&query=' + latitude + ',' + longitude
 
-    request({ url, json: true }, (error, { body }) => {
+    request({ url, json: true }, (error, { body}) => {
         if (error) {
             callback('Unable to connect to weather service!', undefined)
         } else if (body.error) {
             callback('Unable to find location', undefined)
         } else {
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
+            callback(undefined, body.current.weather_descriptions[0]+ ' It is currently ' + body.current.temperature + ' degress out. It feels like ' + body.current.feelslike + ' degress out. The humidity is ' + body.current.humidity + '%')
         }
     })
 }
