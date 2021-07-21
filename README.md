@@ -12,11 +12,10 @@ Simple "Node.js" weather application. Click on the [Link](https://dragan-weather
 #### Hosting
 
 * [HEROKU](www.heroku.com)
+#### APIs
 
-#### APis
-
-* Weather data is retrieved from weatherstack.com
-* Geo data is retrieved from  www.mapbox.com
+* Weather data is retrieved from [weatherstack](www.weatherstack.com)
+* Geo data is retrieved from  [mapbox](www.mapbox.com)
 
 #### Developed By
 
