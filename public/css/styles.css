@@ -1,5 +1,10 @@
 body {
-    background-color:rgb(61, 123, 255);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(28, 38, 47, 1) 0%, rgba(37, 47, 57, 1) 90%);
+
+    background-color: rgb(61, 123, 255);
     color: #ffffff;
     font-family: arial;
     max-width: 650px;
@@ -14,13 +19,6 @@ body {
 
 .main-content {
     position: fixed;
-}
-
-footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
 }
 
 header {
@@ -57,4 +55,9 @@ button {
     padding: 8px;
 }
 
-
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
