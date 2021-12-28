@@ -1,24 +1,32 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(28, 38, 47, 1) 0%, rgba(37, 47, 57, 1) 90%);
-
-    background-color: rgb(61, 123, 255);
+    background-color: rgba(37, 47, 57, 1);
     color: #ffffff;
     font-family: arial;
+    font-size: 26px;
     max-width: 650px;
     margin: 0 auto;
     padding: 0 16px;
 
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-
+    min-height: 100vh
 }
 
 .main-content {
-    position: fixed;
+    flex-grow: 1;
+}
+
+footer {
+    color: #ffffff;
+    border-top: 1px solid #f4511e;
+    margin-top: 16px;
+    padding: 16px;
+
+    font-size: 16px;
+    clear: both;
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
 }
 
 header {
@@ -27,7 +35,7 @@ header {
 }
 
 h1 {
-    font-size: 74px;
+    font-size: 64px;
     margin-bottom: 16px;
 }
 
@@ -43,21 +51,45 @@ header a {
 
 input {
     border: 1px solid #cccccc;
-    padding: 8px;
-    width: 30%;
+    font-size: 20px;
+    padding: 15px;
 }
 
-button {
+.button {
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 250px;
+    transition: all 0.5s;
     cursor: pointer;
-    border: 1px solid #ff0000;
-    background: #ff0000;
-    color: white;
-    padding: 8px;
+    margin: 15px;
 }
 
-footer {
-    color: #888888;
-    border-top: 1px solid #eeeeee;
-    margin-top: 16px;
-    padding: 16px 0;
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
