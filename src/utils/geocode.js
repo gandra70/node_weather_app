@@ -5,7 +5,7 @@ const geocode = (address, callback) => {
 
     request({ url, json: true }, (error, { body } = {}) => {
         if (error) {
-            callback('Unable to connect to weather service. You must use en-us alphabet', undefined)
+            callback('Unable to connect to weather service. You must use the English alphabet!', undefined)
         } else if ( body.features.length === 0) { 
             callback('Unable to find location', undefined)
         }  else {
