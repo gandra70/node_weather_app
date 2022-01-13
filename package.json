@@ -11,10 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^3.2.3",
     "express": "^4.17.1",
     "express-request-language": "^1.1.15",
     "hbs": "^4.0.1",
-    "request": "^2.88.2"
+    "request": "^2.88.2",
+    "text-mask-core": "^5.1.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
