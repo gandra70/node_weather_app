@@ -1,3 +1,23 @@
+#background-video {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (max-width: 750px) {
+    #background-video { display: none; }
+    body {
+    background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
+    background-size: cover;
+    }
+}
+
 body {
     background-color: rgba(37, 47, 57, 1);
     color: #ffffff;
@@ -39,7 +59,9 @@ footer{
     width: 100vw;
     padding-top: 40px;
     text-align: center;
-    color: #fff;
+    color: rgb(202, 202, 202);
+    font-family: arial;
+    font-size: 16px;
 }
 @media only screen and (max-width: 1024px) {
     footer {
